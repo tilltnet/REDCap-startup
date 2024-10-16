@@ -1,0 +1,40 @@
+---
+title: "Untitled"
+format: 
+  dashboard:
+    #logo: "images/logo.png"
+    orientation: columns
+---
+
+
+
+## Column {width = "35%"}
+Placeholder text 
+
+```{r, load-libraries}
+#| echo: false
+#| include: false
+
+library(tidyverse)
+# https://www.youtube.com/watch?v=5zYrgRylkH0
+
+```
+
+```{r, data-set}
+head(starwars)
+```
+
+
+## Column {width = "65%"}
+Placeholder text 
+
+### Row {height = "10%"}
+Placeholder text 
+
+### Row {height = "70%"}
+Placeholder text 
+
+### Row {height = "20%"}
+Placeholder text 
+
+
