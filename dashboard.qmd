@@ -1,40 +1,135 @@
 ---
-title: "Untitled"
-format: 
-  dashboard:
-    #logo: "images/logo.png"
-    orientation: columns
+title: "Templates"
+format: dashboard
+execute:
+  echo: false
+  
 ---
-
-
-
-## Column {width = "35%"}
-Placeholder text 
-
 ```{r, load-libraries}
 #| echo: false
 #| include: false
 
 library(tidyverse)
+library(reactable)
 # https://www.youtube.com/watch?v=5zYrgRylkH0
 
 ```
 
+
 ```{r, data-set}
-head(starwars)
+#| echo: false
+#| include: false
+
+template_data <- read.csv("template_tables/demographics1.csv") |> 
+  rbind(read.csv("template_tables/gad7.csv"))
+
+ojs_define(template_data_ojs = template_data)
 ```
 
+## Row {height=15%}
 
-## Column {width = "65%"}
-Placeholder text 
+```{ojs}
+//| expandable: false
 
-### Row {height = "10%"}
-Placeholder text 
+// transpose 
+templates = transpose(template_data_ojs)
 
-### Row {height = "70%"}
-Placeholder text 
+// create check boxes 
+viewof tempChecks = Inputs.checkbox(
+  templates.map(d => d.form_name),
+  {
+    label: "Select templates",
+    unique: true
+  }
+)
 
-### Row {height = "20%"}
-Placeholder text 
+// Filter the templates based on selected checkboxes
+filteredTemplates = {
+  const selectedForms = tempChecks;
+  return templates.filter(d => selectedForms.includes(d.form_name));
+}
 
+
+
+filteredTemplates2 = {
+  const selectedForms = tempChecks;
+  return templates
+    .filter(d => selectedForms.includes(d.form_name))
+    .map(d => ({
+      variable_field_name: d.variable_field_name,
+      form_name: d.form_name,
+      field_label: d.field_label,
+      choices_calculations_or_slider_labels: d.choices_calculations_or_slider_labels
+    }));
+}
+```
+
+## Row {height=85%}
+
+::: {.panel-tabset}
+
+# Pretty
+```{ojs}
+//| expandable: false
+
+html`<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable Field Name</th>
+      <th>Form Name</th>
+      <th>Field Label</th>
+      <th>Choices/Calculations/Slider Labels</th>
+    </tr>
+  </thead>
+  <tbody>
+    ${filteredTemplates.map(template => html`
+      <tr>
+        <td>${template.variable_field_name}</td>
+        <td>${template.form_name}</td>
+        <td>${template.field_label}</td>
+        <td>${template.choices_calculations_or_slider_labels}</td>
+      </tr>
+    `)}
+  </tbody>
+</table>`
+
+```
+
+# Raw
+```{ojs}
+// Creating a table to display all properties of the filtered templates
+html`<table>
+  <thead>
+    <tr>
+      ${Object.keys(filteredTemplates[0]).map(prop => html`<th>${prop}</th>`)}
+    </tr>
+  </thead>
+  <tbody>
+    ${filteredTemplates.map(template => html`
+      <tr>
+        ${Object.values(template).map(value => html`<td>${value}</td>`)}
+      </tr>
+    `)}
+  </tbody>
+</table>`
+```
+:::
 

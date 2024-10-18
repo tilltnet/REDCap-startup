@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Untitled – Get Started with REDCap</title>
+<title>Templates – Get Started with REDCap</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -35,10 +69,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
 <script src="site_libs/quarto-dashboard/stickythead.js"></script>
 <script src="site_libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
@@ -74,6 +108,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script type="ojs-define">
+{"contents":[{"name":"template_data_ojs","value":{"variable_field_name":["education","work","income","income_depend","insurance","born","born_oth","citizenship","citizenship_oth","lang_pref","lang_pref_indg","lang_pref_oth","latin_term","latin_term_oth","relationship","gad_intro","gad1","gad2","gad3","gad4","gad5","gad6","gad7","gad_total_raw","gad_total_all","gad_is_mild","gad_is_moderate","gad_is_severe","gad_eligible","gad_eligible_text"],"form_name":["demographics","demographics","demographics","demographics","demographics","demographics","demographics","demographics","demographics","demographics","demographics","demographics","demographics","demographics","demographics","gad7","gad7","gad7","gad7","gad7","gad7","gad7","gad7","gad7","gad7","gad7","gad7","gad7","gad7","gad7"],"section_header":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"field_type":["radio","dropdown","dropdown","text","dropdown","dropdown","text","dropdown","text","radio","text","text","checkbox","text","radio","descriptive","radio","radio","radio","radio","radio","radio","radio","calc","calc","calc","calc","calc","calc","text"],"field_label":["What is the highest grade of school you've completed?","Which of the following best described your work situation in the past month?","Last month, what was the total amount of money you and your family lived on, including public assistance (after taxes)?","How many people, including yourself, depend on this income?","What is your current primary insurance plan?","Where were you born?","Please specify where you were born:","Which of the following best describes your current status in the U.S.? Please keep in mind that your answer is completely confidential.","You selected \"Other\" citizenship status. Please describe:","What is your preferred language?","Preferred language, indigenous specified","Preferred language, other specified","Which of the following terms do you use to describe your ethnicity (check all that apply)?","Other latin term, specified","What is your current relationship status?","<div class=\"rich-text-field-label\"><h6>Over the last <span style=\"font-weight: normal;\">2 weeks<\/span>, how often have you been bothered by the following problems?<\/h6><\/div>","Feeling nervous, anxious, or on edge","Not being able to stop or control worrying","Worrying too much about different things","Trouble relaxing","Being so restless that it is hard to sit still","Becoming easily annoyed or irritable","Feeling afraid as if something awful might happen","GAD-7 raw sum, missingness not accounted","GAD-7 total, missingness accounted","GAD-7 score <= 5 (mild)","GAD-7 score >= 10 (moderate)","GAD-7 score >= 15 (severe)","GAD eligible","GAD eligible text"],"choices_calculations_or_slider_labels":["1, No formal education completed | 2, 1st to 8th grade | 3, 9th to 11th grade | 4, GED (high school equivalent) | 5, High school diploma | 6, Some college/university | 7, College/university degree | -999, Decline to answer","1, Full time (more than 30 hours) | 2, Part time (less than 30 hours) | 3, Paid leave (temporarily laid off, sick leave, parental leave) | 4, Seasonal worker | 5, Looking for work | 6, Not employed, not looking for work | 7, Retired | 8, Disability | 9, Housework | 10, Student | -999, Decline to answer","1, Less than $200 | 2, $200-$499 | 3, $500-$999 | 4, $1,000-$1,999 | 5, $2,000-$2,999 | 6, $3,000-$3,999 | 7, $4,000-$4,999 | 8, $5,000-$5,999 | 9, $6,000 or more | -999, Decline to answer",null,"1, ACA (Obama Care) | 2, Medicare only | 3, Medicaid only | 4, Medicare and Medicaid | 5, Medicare/HMO | 6, Medicaid/HMO | 7, PVT/HMO from work/Spouse | 8, Ryan White | 9, Uninsured | -999, Decline to answer","1, United States | 2, Argentina | 3, Bahamas | 4, Bolivia | 5, Brazil | 6, Chile | 7, Colombia | 8, Costa Rica | 9, Cuba | 10, Dominican Republic | 11, Ecuador | 12, El Salvador | 13, Guatemala | 14, Haiti | 15, Honduras | 16, Jamaica | 17, Mexico | 18, Nicaragua | 19, Panama | 20, Paraguay | 21, Peru | 22, Puerto Rico | 23, Spain | 24, Trinidad and Tobago | 25, Uruguay | 26, Venezuela | 27, Other (specify) | -999, Decline to answer",null,"1, US Citizen | 2, Permanent resident | 3, Awaiting residency | 4, Without papers | 5, Student visa | 6, Dependent on someone else's visa (husband/wife/parent/guardian) | 7, Asylum | 8, Awaiting asylum | 9, Temporary resident | 10, Temporary work visa | 11, Tourist visa | 12, Expired visa | 13, Temporary protected immigrant (DACA/Dreamer) | 14, Other | -999, Decline to answer",null,"1, English | 2, Spanish | 3, Indigenous language {lang_pref_indg} | 4, Other {lang_pref_oth} | -999, Decline to answer",null,null,"1, Latino | 2, Latine | 3, Latinx | 4, Latina | 5, Hispanic | 6, Another term {latin_term_oth} | -999, Decline to answer",null,"1, Single | 2, Dating casually | 3, Serious monogamous partnership | 4, Serious non-monogamous partnership | 5, Polyamorous relationship | 6, Married, monogamous (exclusive) | 7, Married, non-monogamous | -999, Decline to answer",null,"3, Nearly every day | 2, More than half the days | 1, Several days | 0, Not at all | -999, Decline to answer","3, Nearly every day | 2, More than half the days | 1, Several days | 0, Not at all | -999, Decline to answer","3, Nearly every day | 2, More than half the days | 1, Several days | 0, Not at all | -999, Decline to answer","3, Nearly every day | 2, More than half the days | 1, Several days | 0, Not at all | -999, Decline to answer","3, Nearly every day | 2, More than half the days | 1, Several days | 0, Not at all | -999, Decline to answer","3, Nearly every day | 2, More than half the days | 1, Several days | 0, Not at all | -999, Decline to answer","3, Nearly every day | 2, More than half the days | 1, Several days | 0, Not at all | -999, Decline to answer","sum([gad1], [gad2], [gad3], [gad4], [gad5], [gad6], [gad7])","if([gad_total_raw] >= '0', [gad_total_raw],\nif([gad_total_raw] < '0', -444,\nif(([gad1]='' OR [gad2]='' OR [gad3]='' OR [gad4]='' OR [gad5]='' OR [gad6]='' OR [gad7]=''), -444, [gad_total_raw])))","if([gad_total_all] <= 5 AND [gad_total_all] >= '0', 1,\nif([gad_total_all] < 0, -444,0))","if([gad_total_all] >= 10, 1,\nif([gad_total_all] < 0, -444,0))","if([gad_total_all] >= 15, 1,\nif([gad_total_all] < 0, -444,0))","if([gad_total_all] >= 10, 1,0)",null],"field_note":[null,null,null,"Type -999 to decline to answer",null,null,"Type -999 to decline to answer",null,"Type -999 to decline to answer",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"text_validation_type_or_show_slider_number":[null,null,null,"integer",null,"autocomplete",null,"autocomplete",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"text_validation_min":[null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"text_validation_max":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"identifier":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"branching_logic_show_field_only_if":[null,null,null,null,null,null,"[born] = 27",null,"[citizenship] = 14",null,"[lang_pref] = 3","[lang_pref] = 4",null,"[latin_term(6)]",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"required_field":["y","y","y","y","y","y","y","y","y","y","y","y","y","y","y",null,"y","y","y","y","y","y","y",null,null,null,null,null,null,null],"custom_alignment":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"question_number_surveys_only":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"matrix_group_name":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"gad_intro","gad_intro","gad_intro","gad_intro","gad_intro","gad_intro","gad_intro",null,null,null,null,null,null,null],"matrix_ranking":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"field_annotation":[null,null,null,null,null,null,null,null,null,null,"@PLACEHOLDER='please specify'","@PLACEHOLDER='please specify'",null,"@PLACEHOLDER = 'please specify'",null,null,null,null,null,null,null,null,null,"@HIDDEN-SURVEY","@HIDDEN-SURVEY","@HIDDEN-SURVEY","@HIDDEN-SURVEY","@HIDDEN-SURVEY","@HIDDEN-SURVEY","@CALCTEXT(if([gad_is_moderate] = 1, \"Eligible\", \"Not eligible\"))\n@HIDDEN-SURVEY"]}}]}
+</script>
 
 
 </head>
@@ -91,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="navbar-brand-container">       
 
       <div class="navbar-title">
-        <div class="navbar-title-text"><a href="#">Untitled</a></div>
+        <div class="navbar-title-text"><a href="#">Templates</a></div>
         
         
       </div>
@@ -106,83 +145,161 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
 <!-- main -->
 
-<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="fill" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<p>Placeholder text</p>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output cell-output-stdout html-fill-item html-fill-container">
-<pre><code># A tibble: 6 × 14
-  name      height  mass hair_color skin_color eye_color birth_year sex   gender
-  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
-1 Luke Sky…    172    77 blond      fair       blue            19   male  mascu…
-2 C-3PO        167    75 &lt;NA&gt;       gold       yellow         112   none  mascu…
-3 R2-D2         96    32 &lt;NA&gt;       white, bl… red             33   none  mascu…
-4 Darth Va…    202   136 none       white      yellow          41.9 male  mascu…
-5 Leia Org…    150    49 brown      light      brown           19   fema… femin…
-6 Owen Lars    178   120 brown, gr… light      blue            52   male  mascu…
-# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
-#   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
-</div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div><div class="bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, max-content) minmax(3em, max-content) minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<p>Placeholder text</p>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 15fr) minmax(3em, 85fr); grid-auto-columns: minmax(0, 1fr);">
 <div class="bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card cell bslib-card html-fill-container" data-bslib-card-init="" data-require-bs-caller="card()">
 <div class="card-body html-fill-item html-fill-container">
-<p>Placeholder text</p>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb1" data-startfrom="35" data-source-offset="-15"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 34;"><span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>templates <span class="op">=</span> <span class="fu">transpose</span>(template_data_ojs)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co">// create check boxes </span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>viewof tempChecks <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  templates<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">form_name</span>)<span class="op">,</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Select templates"</span><span class="op">,</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co">// Filter the templates based on selected checkboxes</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>filteredTemplates <span class="op">=</span> {</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> selectedForms <span class="op">=</span> tempChecks<span class="op">;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> templates<span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> selectedForms<span class="op">.</span><span class="fu">includes</span>(d<span class="op">.</span><span class="at">form_name</span>))<span class="op">;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>filteredTemplates2 <span class="op">=</span> {</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> selectedForms <span class="op">=</span> tempChecks<span class="op">;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> templates</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> selectedForms<span class="op">.</span><span class="fu">includes</span>(d<span class="op">.</span><span class="at">form_name</span>))</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> ({</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>      <span class="dt">variable_field_name</span><span class="op">:</span> d<span class="op">.</span><span class="at">variable_field_name</span><span class="op">,</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>      <span class="dt">form_name</span><span class="op">:</span> d<span class="op">.</span><span class="at">form_name</span><span class="op">,</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>      <span class="dt">field_label</span><span class="op">:</span> d<span class="op">.</span><span class="at">field_label</span><span class="op">,</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>      <span class="dt">choices_calculations_or_slider_labels</span><span class="op">:</span> d<span class="op">.</span><span class="at">choices_calculations_or_slider_labels</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    }))<span class="op">;</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-1" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
-<div class="bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<p>Placeholder text</p>
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-2" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-3" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container">
+<div id="ojs-cell-1-4" data-nodetype="declaration" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 <div class="bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<p>Placeholder text</p>
+<div class="panel-tabset html-fill-item html-fill-container">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Pretty</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Raw</a></li></ul>
+<div class="tab-content html-fill-item html-fill-container">
+<div id="tabset-1-1" class="tab-pane active html-fill-item html-fill-container" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb2" data-startfrom="73" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 72;"><span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;style&gt;</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="vs">  table {</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="vs">    width: 100%;</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="vs">    border-collapse: collapse;</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="vs">  }</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="vs">  th, td {</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="vs">    padding: 10px;</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="vs">    text-align: left;</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="vs">    border-bottom: 1px solid #ddd;</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="vs">  }</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="vs">  th {</span></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="vs">    background-color: #f2f2f2;</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="vs">  }</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="vs">  tr:hover {</span></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="vs">    background-color: #f5f5f5;</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="vs">  }</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/style&gt;</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;table&gt;</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;thead&gt;</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;tr&gt;</span></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Variable Field Name&lt;/th&gt;</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Form Name&lt;/th&gt;</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Field Label&lt;/th&gt;</span></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;th&gt;Choices/Calculations/Slider Labels&lt;/th&gt;</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/tr&gt;</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/thead&gt;</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;tbody&gt;</span></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="vs">    </span><span class="sc">${</span>filteredTemplates<span class="op">.</span><span class="fu">map</span>(template <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;tr&gt;</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;td&gt;</span><span class="sc">${</span>template<span class="op">.</span><span class="at">variable_field_name</span><span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;td&gt;</span><span class="sc">${</span>template<span class="op">.</span><span class="at">form_name</span><span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;td&gt;</span><span class="sc">${</span>template<span class="op">.</span><span class="at">field_label</span><span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;td&gt;</span><span class="sc">${</span>template<span class="op">.</span><span class="at">choices_calculations_or_slider_labels</span><span class="sc">}</span><span class="vs">&lt;/td&gt;</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/tr&gt;</span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span>)<span class="sc">}</span></span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/tbody&gt;</span></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/table&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-2" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div id="tabset-1-2" class="tab-pane html-fill-item html-fill-container" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb3" data-startfrom="117" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 116;"><span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="co">// Creating a table to display all properties of the filtered templates</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;table&gt;</span></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;thead&gt;</span></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;tr&gt;</span></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span><span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(filteredTemplates[<span class="dv">0</span>])<span class="op">.</span><span class="fu">map</span>(prop <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;th&gt;</span><span class="sc">${</span>prop<span class="sc">}</span><span class="vs">&lt;/th&gt;`</span>)<span class="sc">}</span></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/tr&gt;</span></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/thead&gt;</span></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;tbody&gt;</span></span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="vs">    </span><span class="sc">${</span>filteredTemplates<span class="op">.</span><span class="fu">map</span>(template <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;tr&gt;</span></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a><span class="vs">        </span><span class="sc">${</span><span class="bu">Object</span><span class="op">.</span><span class="fu">values</span>(template)<span class="op">.</span><span class="fu">map</span>(value <span class="kw">=&gt;</span> <span class="fu">html</span><span class="vs">`&lt;td&gt;</span><span class="sc">${</span>value<span class="sc">}</span><span class="vs">&lt;/td&gt;`</span>)<span class="sc">}</span></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/tr&gt;</span></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span>)<span class="sc">}</span></span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/tbody&gt;</span></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;/table&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-3" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
@@ -194,9 +311,19 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 </div>
 </div>
-</div>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuLy8gdHJhbnNwb3NlIFxudGVtcGxhdGVzID0gdHJhbnNwb3NlKHRlbXBsYXRlX2RhdGFfb2pzKVxuXG4vLyBjcmVhdGUgY2hlY2sgYm94ZXMgXG52aWV3b2YgdGVtcENoZWNrcyA9IElucHV0cy5jaGVja2JveChcbiAgdGVtcGxhdGVzLm1hcChkID0+IGQuZm9ybV9uYW1lKSxcbiAge1xuICAgIGxhYmVsOiBcIlNlbGVjdCB0ZW1wbGF0ZXNcIixcbiAgICB1bmlxdWU6IHRydWVcbiAgfVxuKVxuXG4vLyBGaWx0ZXIgdGhlIHRlbXBsYXRlcyBiYXNlZCBvbiBzZWxlY3RlZCBjaGVja2JveGVzXG5maWx0ZXJlZFRlbXBsYXRlcyA9IHtcbiAgY29uc3Qgc2VsZWN0ZWRGb3JtcyA9IHRlbXBDaGVja3M7XG4gIHJldHVybiB0ZW1wbGF0ZXMuZmlsdGVyKGQgPT4gc2VsZWN0ZWRGb3Jtcy5pbmNsdWRlcyhkLmZvcm1fbmFtZSkpO1xufVxuXG5cblxuZmlsdGVyZWRUZW1wbGF0ZXMyID0ge1xuICBjb25zdCBzZWxlY3RlZEZvcm1zID0gdGVtcENoZWNrcztcbiAgcmV0dXJuIHRlbXBsYXRlc1xuICAgIC5maWx0ZXIoZCA9PiBzZWxlY3RlZEZvcm1zLmluY2x1ZGVzKGQuZm9ybV9uYW1lKSlcbiAgICAubWFwKGQgPT4gKHtcbiAgICAgIHZhcmlhYmxlX2ZpZWxkX25hbWU6IGQudmFyaWFibGVfZmllbGRfbmFtZSxcbiAgICAgIGZvcm1fbmFtZTogZC5mb3JtX25hbWUsXG4gICAgICBmaWVsZF9sYWJlbDogZC5maWVsZF9sYWJlbCxcbiAgICAgIGNob2ljZXNfY2FsY3VsYXRpb25zX29yX3NsaWRlcl9sYWJlbHM6IGQuY2hvaWNlc19jYWxjdWxhdGlvbnNfb3Jfc2xpZGVyX2xhYmVsc1xuICAgIH0pKTtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuaHRtbGA8c3R5bGU+XG4gIHRhYmxlIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xuICB9XG4gIHRoLCB0ZCB7XG4gICAgcGFkZGluZzogMTBweDtcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZGRkO1xuICB9XG4gIHRoIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyO1xuICB9XG4gIHRyOmhvdmVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjVmNWY1O1xuICB9XG48L3N0eWxlPlxuXG48dGFibGU+XG4gIDx0aGVhZD5cbiAgICA8dHI+XG4gICAgICA8dGg+VmFyaWFibGUgRmllbGQgTmFtZTwvdGg+XG4gICAgICA8dGg+Rm9ybSBOYW1lPC90aD5cbiAgICAgIDx0aD5GaWVsZCBMYWJlbDwvdGg+XG4gICAgICA8dGg+Q2hvaWNlcy9DYWxjdWxhdGlvbnMvU2xpZGVyIExhYmVsczwvdGg+XG4gICAgPC90cj5cbiAgPC90aGVhZD5cbiAgPHRib2R5PlxuICAgICR7ZmlsdGVyZWRUZW1wbGF0ZXMubWFwKHRlbXBsYXRlID0+IGh0bWxgXG4gICAgICA8dHI+XG4gICAgICAgIDx0ZD4ke3RlbXBsYXRlLnZhcmlhYmxlX2ZpZWxkX25hbWV9PC90ZD5cbiAgICAgICAgPHRkPiR7dGVtcGxhdGUuZm9ybV9uYW1lfTwvdGQ+XG4gICAgICAgIDx0ZD4ke3RlbXBsYXRlLmZpZWxkX2xhYmVsfTwvdGQ+XG4gICAgICAgIDx0ZD4ke3RlbXBsYXRlLmNob2ljZXNfY2FsY3VsYXRpb25zX29yX3NsaWRlcl9sYWJlbHN9PC90ZD5cbiAgICAgIDwvdHI+XG4gICAgYCl9XG4gIDwvdGJvZHk+XG48L3RhYmxlPmBcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiLy8gQ3JlYXRpbmcgYSB0YWJsZSB0byBkaXNwbGF5IGFsbCBwcm9wZXJ0aWVzIG9mIHRoZSBmaWx0ZXJlZCB0ZW1wbGF0ZXNcbmh0bWxgPHRhYmxlPlxuICA8dGhlYWQ+XG4gICAgPHRyPlxuICAgICAgJHtPYmplY3Qua2V5cyhmaWx0ZXJlZFRlbXBsYXRlc1swXSkubWFwKHByb3AgPT4gaHRtbGA8dGg+JHtwcm9wfTwvdGg+YCl9XG4gICAgPC90cj5cbiAgPC90aGVhZD5cbiAgPHRib2R5PlxuICAgICR7ZmlsdGVyZWRUZW1wbGF0ZXMubWFwKHRlbXBsYXRlID0+IGh0bWxgXG4gICAgICA8dHI+XG4gICAgICAgICR7T2JqZWN0LnZhbHVlcyh0ZW1wbGF0ZSkubWFwKHZhbHVlID0+IGh0bWxgPHRkPiR7dmFsdWV9PC90ZD5gKX1cbiAgICAgIDwvdHI+XG4gICAgYCl9XG4gIDwvdGJvZHk+XG48L3RhYmxlPmBcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndGVtcENoZWNrcycpIn1dfQ==
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
