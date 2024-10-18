@@ -1,6 +1,8 @@
 ---
 title: "Templates"
 format: dashboard
+theme:
+  - journal
 execute:
   echo: false
   
